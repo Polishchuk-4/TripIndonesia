@@ -43,9 +43,127 @@ body {
 body {
   font-family: OpenSans;
   font-weight: 600;
+  color: #FFF;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+[class*=__container] {
+  max-width: 1260px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+@media (max-width: 1259.98px) {
+  [class*=__container] {
+    max-width: 970px;
+  }
+}
+@media (max-width: 1259.98px) and (max-width: 990.98px) {
+  [class*=__container] {
+    max-width: 750px;
+  }
+}
+@media (max-width: 1259.98px) and (max-width: 990.98px) and (max-width: 767.98px) {
+  [class*=__container] {
+    max-width: none;
+    padding: 0 15px;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 65px;
+  text-transform: capitalize;
+  color: #fff;
+}
+h1 span {
+  font-weight: 400;
+}
+
+h2 {
+  position: relative;
+  padding-left: 60px;
+  color: #FFC178;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 45px;
+  height: 2px;
+  background-color: #FFC178;
+}
+
+@media (max-width: 990.98px) {
+  h2 {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 990.98px) and (max-width: 767.98px) {
+  h2 {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+@media (max-width: 767.98px) {
+  p {
+    font-size: 12px;
+  }
+}
+
+a {
+  position: relative;
+  padding-right: 30px;
+  color: #FBD784;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+a::after {
+  content: url("../../img/komodo/arrow_right.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -35%);
+  color: #FBD784;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.logo {
+  color: #FFF;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  text-transform: capitalize;
 }
 
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +207,8 @@ body {
   }
   .header .menu-header ul a {
     font-size: 14px;
+    color: #FFF;
+    font-weight: 600;
   }
 }
 @media (max-width: 990.98px) and (max-width: 767.98px) {
@@ -123,39 +243,20 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-.header .header__row .header__body h2 {
-  position: relative;
-  padding-left: 80px;
-  color: #FFC178;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-}
-.header .header__row .header__body h2::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background-color: #FFC178;
-}
 .header .header__row .header__body h1 {
-  margin-top: 16px;
-  font-size: 66px;
-  font-weight: 400;
-  line-height: 80px;
-  text-transform: capitalize;
+  font-size: 64px;
+  margin-bottom: 126px;
 }
 .header .header__row .header__body h1 span {
-  font-weight: 700;
+  font-weight: 400;
+}
+.header .header__row .header__body h2 {
+  margin-bottom: 16px;
 }
 .header .header__row .header__body .header__scroll {
   position: relative;
   align-self: center;
   padding-right: 30px;
-  margin-top: 126px;
   color: inherit;
   font-weight: 400;
 }
@@ -214,5 +315,63 @@ body {
 @media (max-width: 1199.98px) and (max-width: 990.98px) and (max-width: 767.98) {
   .header {
     padding: 29px 42px 170px 42px;
+  }
+}
+.header a {
+  padding-right: 0px;
+}
+.header a::after {
+  display: none;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transform: translate(0px, 25%);
+  width: 100%;
+  height: 250px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.komodo {
+  z-index: 50;
+  margin-top: -70px;
+  margin-bottom: 150px;
+}
+.komodo .komodo__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+}
+@media (max-width: 990.98px) {
+  .komodo .komodo__row .komodo__img {
+    padding: 0 50px;
+  }
+}
+.komodo .komodo__row .komodo__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.komodo .komodo__row .komodo__body h2, .komodo .komodo__row .komodo__body h1, .komodo .komodo__row .komodo__body p {
+  margin-bottom: 17px;
+}
+@media (max-width: 1259.98px) {
+  .komodo .komodo__row {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+}
+@media (max-width: 1259.98px) and (max-width: 990.98px) {
+  .komodo .komodo__row {
+    grid-template-columns: auto;
+    justify-content: center;
+    row-gap: 50px;
   }
 }/*# sourceMappingURL=main.css.map */
