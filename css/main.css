@@ -91,6 +91,7 @@ h1 span {
 h2 {
   position: relative;
   padding-left: 60px;
+  padding-right: 60px;
   color: #FFC178;
   font-size: 16px;
   font-weight: 600;
@@ -374,4 +375,61 @@ a::after {
     justify-content: center;
     row-gap: 50px;
   }
+}
+.bromo {
+  margin-bottom: 125px;
+}
+.bromo .swiper {
+  width: 100%;
+  height: 700px;
+}
+@media (max-width: 1259.98px) {
+  .bromo .swiper {
+    height: 600px;
+  }
+}
+.bromo .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bromo .swiper .swiper-slide {
+  position: relative;
+}
+.bromo .swiper .swiper-slide__body {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 40px 200px;
+}
+.bromo .swiper .swiper-slide__body h2 {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.bromo .swiper .swiper-slide__body h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 45px;
+  height: 2px;
+  background-color: #FFC178;
+}
+.bromo .swiper .swiper-slide__body h1 {
+  margin-bottom: 27px;
+}
+.bromo .swiper .swiper-slide__body p {
+  margin-bottom: 42px;
+}
+@media (max-width: 1259.98px) {
+  .bromo .swiper .swiper-slide__body {
+    padding: 35px 150px;
+  }
+  .bromo .swiper .swiper-slide__body h2, .bromo .swiper .swiper-slide__body h2::after, .bromo .swiper .swiper-slide__body h2::before {
+    color: #e8bc56;
+  }
+}
+.bromo .swiper .swiper-button-prev, .bromo .swiper .swiper-button-next {
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
