@@ -363,6 +363,9 @@ a::after {
   -o-object-fit: fill;
      object-fit: fill;
 }
+.komodo .komodo__row .komodo__body {
+  text-align: left;
+}
 .komodo .komodo__row .komodo__body h2, .komodo .komodo__row .komodo__body h1, .komodo .komodo__row .komodo__body p {
   margin-bottom: 17px;
 }
@@ -380,7 +383,7 @@ a::after {
   }
 }
 .bromo {
-  margin-bottom: 125px;
+  margin-bottom: 220px;
 }
 .bromo .swiper {
   width: 100%;
