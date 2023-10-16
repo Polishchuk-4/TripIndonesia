@@ -91,7 +91,7 @@ p {
     }
 }
 
-a {
+section a {
     position: relative;
     padding-right: 30px;
     color: #FBD784;
@@ -99,7 +99,7 @@ a {
     font-weight: 600;
 }
 
-a::after {
+section a::after {
     content: url('../../img/komodo/arrow_right.svg');
     position: absolute;
     top: 50%;
@@ -108,4 +108,10 @@ a::after {
     color: #FBD784;
     font-size: 16px;
     font-weight: 600;
+}
+
+.button {
+    border-radius: 8px;
+    background: #FFA343;
+    color: #000;
 }
